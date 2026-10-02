@@ -1,0 +1,17 @@
+# CMake build trees
+build/
+install/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+CTestTestfile.cmake
+Testing/
+install_manifest.txt
+compile_commands.json
+
+# Direct MSVC compiler and linker output
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.exe

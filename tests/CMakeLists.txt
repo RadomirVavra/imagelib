@@ -1,0 +1,10 @@
+add_executable(imagelib_tests test_imagelib.cpp)
+target_link_libraries(imagelib_tests PRIVATE imagelib::imagelib)
+target_compile_features(imagelib_tests PRIVATE cxx_std_20)
+add_test(NAME imagelib_tests COMMAND imagelib_tests)
+
+add_executable(imagelib_no_half_tests test_imagelib.cpp)
+target_link_libraries(imagelib_no_half_tests PRIVATE imagelib::imagelib)
+target_compile_features(imagelib_no_half_tests PRIVATE cxx_std_20)
+target_compile_definitions(imagelib_no_half_tests PRIVATE IMAGELIB_USE_HALF=0)
+add_test(NAME imagelib_no_half_tests COMMAND imagelib_no_half_tests)
